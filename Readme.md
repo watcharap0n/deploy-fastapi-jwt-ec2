@@ -7,19 +7,25 @@
     $ pip install -r dashboard_user/requirements.txt
     $ pip install -r register_user/requirements.txt
 
-**run server dashboard port 8001**
+**testing run server dashboard port 8001**
 
     $ cd dashbard_user
     $ uvicorn app.main:app --port 8001 --reload
 
-**run server register port 8002**
+**testing run server register port 8002**
 
     $ cd dashbard_user
     $ uvicorn app.main:app --port 8002 --reload
 
 **Run docker container swarm**
 
-    $ in progress...
+    $ docker compose up -d
+
+**You can run reverse proxy this url**
+
+    https://localhost:8080/api/v1/register/docs
+    https://localhost:8080/api/v1/dashboard/docs
+
 
 
 
