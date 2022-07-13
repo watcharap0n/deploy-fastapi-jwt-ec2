@@ -1,4 +1,4 @@
-# Fastapi JWT Microservice by MongoDB
+# FastAPI JWT Microservice by MongoDB
 
 **install dependencies Python**
 
