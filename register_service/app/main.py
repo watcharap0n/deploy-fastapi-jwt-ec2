@@ -3,14 +3,14 @@ from app.api import security
 
 app = FastAPI(
     version='1.0.0',
-    docs_url='/register/docs',
-    redoc_url='/register/redoc',
-    openapi_url='/register/openapi.json',
+    docs_url='/api/v1/register/docs',
+    redoc_url='/api/v1/register/redoc',
+    openapi_url='/api/v1/register/openapi.json',
 )
 
 app.include_router(
     security.security,
-    prefix='/authenticate',
+    prefix='/api/v1/authenticate',
     tags=['Security'],
     responses={418: {"description": "i'm teapot"}},
 )
