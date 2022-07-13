@@ -12,5 +12,5 @@ app.include_router(
     user.router,
     prefix='/user',
     tags=['User'],
-    responses={418: {"description": "I'm teapot"}},
+    responses={418: {"description": "i'm teapot"}},
 )
