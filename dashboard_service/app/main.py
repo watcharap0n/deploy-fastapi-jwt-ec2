@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from app.api import user
+from mangum import Mangum
 
 app = FastAPI(
     version='1.0.0',
@@ -14,3 +15,5 @@ app.include_router(
     tags=['User'],
     responses={418: {"description": "i'm teapot"}},
 )
+
+handler = Mangum(app)
