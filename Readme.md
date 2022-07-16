@@ -76,7 +76,14 @@ server {
 
 }
 ```
+
+**Push stack container**
     
+    $ sudo docker-compose up -d
+    $ curl -s localhost:8001 | result "First page"
+
+open your domain :)
+
 
 
 
