@@ -17,3 +17,8 @@ app.include_router(
 )
 
 handler = Mangum(app)
+
+
+@app.get('/')
+async def index():
+    return 'First page'
