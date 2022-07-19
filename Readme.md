@@ -79,6 +79,8 @@ server {
 
 **Push stack container**
     
+    $ git clone https://github.com/watcharap0n/deploy-fastapi-jwt-ec2.git
+    $ cd deploy-fastapi-jwt-ec2
     $ sudo docker-compose up -d
     $ curl -s localhost:8001 | result "First page"
 
