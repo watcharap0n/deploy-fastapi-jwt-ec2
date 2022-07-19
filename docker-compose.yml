@@ -10,6 +10,8 @@ services:
       - "8001:8001"
     env_file:
       - app_dashboard.env
+    networks:
+      - dashboard_network
 
   register_service:
     container_name: register_service
@@ -20,6 +22,8 @@ services:
       - "8002:8002"
     env_file:
       - app_register.env
+    networks:
+      - register_network
 
   mongo:
     container_name: mongo-db
@@ -28,6 +32,8 @@ services:
       - "27019:27017"
     volumes:
       - ./dashboard_service/app/db/data:/data/db
+    networks:
+      - default
 
   nginx:
     container_name: fastapi_revers_proxy
@@ -39,5 +45,22 @@ services:
     depends_on:
       - dashboard_service
       - register_service
+    networks:
+      - default
+      - dashboard_network
+      - register_network
 
+networks:
+  default:
+    external:
+      name:
+        microservice_network
+
+  dashboard_network:
+    external:
+      name: dashboard_network
+
+  register_network:
+    external:
+      name: register_network
 
