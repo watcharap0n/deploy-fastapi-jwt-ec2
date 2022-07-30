@@ -17,3 +17,8 @@ app.include_router(
 )
 
 handler = Mangum(app)
+
+
+@app.get('/api/v1/authenticate/index')
+async def authenticate_index():
+    return 'authenticate index'
