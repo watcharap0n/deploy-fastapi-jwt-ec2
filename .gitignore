@@ -6,3 +6,4 @@ Pipfile.lock
 .gitignore
 *.env
 *.pem
+dashboard_service/app/db/data
